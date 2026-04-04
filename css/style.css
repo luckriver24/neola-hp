@@ -132,7 +132,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 24px 5%;
+  padding: 20px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,7 +144,7 @@ img {
 .header.scrolled {
   background-color: rgba(253, 251, 249, 0.95);
   backdrop-filter: blur(10px);
-  padding: 18px 5%;
+  padding: 15px 5%;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
 }
 
@@ -155,7 +155,7 @@ img {
 
 .logo img {
   display: block;
-  height: 96px;
+  height: 88px;
   width: auto;
 }
 
@@ -213,7 +213,7 @@ img {
 /* Mobile Menu */
 @media (max-width: 768px) {
   .logo img {
-    height: 72px;
+    height: 68px;
   }
 
   .nav {
