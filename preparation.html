@@ -31,6 +31,12 @@
             color: var(--color-text-light);
             text-align: center;
         }
+        .prep-intro-line {
+            display: inline;
+        }
+        .pc-only {
+            display: inline;
+        }
         .prep-section {
             margin-bottom: 50px;
         }
@@ -66,8 +72,66 @@
             line-height: 1.8;
         }
         @media (max-width: 768px) {
+            .pc-only {
+                display: none;
+            }
+            .prep-intro-line {
+                display: block;
+                white-space: normal;
+            }
+            .prep-page {
+                padding: 110px 30px 72px;
+            }
             .prep-container {
-                padding: 40px 6%;
+                padding: 40px 28px;
+            }
+            .prep-title {
+                font-size: 1.8rem;
+            }
+            .prep-intro {
+                font-size: 0.9rem;
+                line-height: 1.85;
+            }
+            .prep-section-title {
+                font-size: 1.16rem;
+                line-height: 1.6;
+            }
+            .prep-item-title {
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+            .prep-item-text,
+            .prep-cta p {
+                font-size: 0.88rem;
+                line-height: 1.9;
+                word-break: auto-phrase;
+                overflow-wrap: normal;
+            }
+        }
+        @media (max-width: 420px) {
+            .prep-page {
+                padding: 104px 24px 64px;
+            }
+            .prep-container {
+                padding: 34px 22px;
+            }
+            .prep-title {
+                font-size: 1.62rem;
+            }
+            .prep-intro {
+                font-size: 0.82rem;
+                line-height: 1.8;
+            }
+            .prep-section-title {
+                font-size: 1.06rem;
+            }
+            .prep-item-title {
+                font-size: 0.92rem;
+            }
+            .prep-item-text,
+            .prep-cta p {
+                font-size: 0.82rem;
+                line-height: 1.82;
             }
         }
     </style>
@@ -94,8 +158,8 @@
             <h1 class="prep-title">撮影前のお願い</h1>
             
             <div class="prep-intro">
-                <p>photo neolaのニューボーンフォトは、赤ちゃんとご家族が安心して、<br class="pc-only">ゆったり過ごせる時間を大切にしています。</p>
-                <p style="margin-top: 20px;">撮影をスムーズに進めるため、いくつか事前のご準備をお願いしております。<br class="pc-only">どれも赤ちゃんの負担を減らし、心地よく撮影するためのものです。<br class="pc-only">ご協力いただけますと幸いです。</p>
+                <p><span class="prep-intro-line">photo neolaのニューボーンフォトは、赤ちゃんとご家族が安心して、</span><br><span class="prep-intro-line">ゆったり過ごせる時間を大切にしています。</span></p>
+                <p style="margin-top: 20px;"><span class="prep-intro-line">撮影をスムーズに進めるため、いくつか事前のご準備をお願いしております。</span><br><span class="prep-intro-line">どれも赤ちゃんの負担を減らし、心地よく撮影するためのものです。</span><br><span class="prep-intro-line">ご協力いただけますと幸いです。</span></p>
             </div>
             
             <div class="prep-section">

@@ -788,6 +788,11 @@ img {
   margin-bottom: 10px;
 }
 
+.cta-title-line {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .cta-desc {
   margin-bottom: 40px;
   color: var(--color-text-light);
@@ -977,6 +982,11 @@ img {
     scroll-snap-align: start;
   }
 
+  .pricing-target {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
   .plan-swipe-hint,
   .swipe-hint {
     display: block;
@@ -1114,6 +1124,11 @@ img {
     grid-auto-columns: minmax(236px, 80vw);
     gap: 16px;
     padding-top: 24px;
+  }
+
+  .pricing-target {
+    font-size: 0.76rem;
+    line-height: 1.65;
   }
 
   .voice-grid {
