@@ -537,6 +537,33 @@ img {
 .swipe-hint {
   display: none;
 }
+.plan-common {
+  max-width: 820px;
+  margin: -28px auto 34px;
+  padding: 22px 28px;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+.plan-common-title {
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+.plan-common-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 18px;
+  list-style: none;
+}
+.plan-common-list li {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  text-align: center;
+}
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -688,6 +715,34 @@ img {
   padding-bottom: 8px;
   font-size: 0.95rem;
   color: var(--color-text);
+}
+.transportation-grid {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.transportation-item {
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 12px;
+}
+.transportation-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.transportation-item-wide {
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+.transportation-area {
+  font-weight: 700;
+}
+.transportation-item-wide .transportation-area {
+  max-width: 620px;
+  line-height: 1.8;
+}
+.transportation-price {
+  white-space: nowrap;
 }
 .option-note {
   grid-column: 1 / -1;
@@ -1049,6 +1104,16 @@ img {
     line-height: 1.75;
   }
 
+  .plan-common {
+    margin: -28px 0 28px;
+    padding: 20px 18px;
+  }
+
+  .plan-common-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
   .pricing-grid {
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -1134,6 +1199,14 @@ img {
   .options-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .transportation-item,
+  .transportation-item-wide {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
   }
 
   .about-highlight,
