@@ -314,7 +314,6 @@ img {
 .hero-title-line,
 .hero-subtitle-line {
   display: inline-block;
-  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -520,7 +519,6 @@ img {
   margin-bottom: 25px;
   color: var(--color-text);
   font-family: var(--font-heading);
-  white-space: nowrap;
 }
 .plan-intro p {
   color: var(--color-text-light);
@@ -533,6 +531,28 @@ img {
   margin-top: 15px;
   display: block;
 }
+.family-message {
+  max-width: 850px;
+  margin: 0 auto 34px;
+  padding: 28px 34px;
+  background: #faf8f5;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  text-align: center;
+}
+.family-message-title {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+}
+.family-message p:last-child {
+  margin-bottom: 0;
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.desktop-only { display: initial; }
 .plan-swipe-hint,
 .swipe-hint {
   display: none;
@@ -571,7 +591,8 @@ img {
 }
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
   gap: 20px;
   margin-bottom: 80px;
   align-items: stretch;
@@ -593,6 +614,14 @@ img {
   box-shadow: 0 15px 40px rgba(0,0,0,0.05);
   z-index: 2;
 }
+.pricing-card.family-plan {
+  padding: 42px clamp(24px, 6vw, 64px) 36px;
+  background: #faf8f5;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+.family-plan .pricing-name { font-size: 1.55rem; }
+.family-plan .pricing-desc { min-height: 0; }
 .pricing-card.mini {
   background-color: #fdfbf9;
 }
@@ -701,6 +730,39 @@ img {
 .options-section {
   margin-bottom: 25px; /* Reduced gap between option and transportation */
 }
+.booking-flow {
+  margin: 54px auto 0;
+  padding: 40px;
+  background: #faf8f5;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+.booking-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.booking-steps li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 16px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  text-align: center;
+}
+.booking-step-number {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+  font-family: var(--font-eng);
+  font-size: 1.25rem;
+}
+.booking-step-title { margin-bottom: 9px; font-weight: 700; font-size: 0.92rem; }
+.booking-step-desc { color: var(--color-text-light); font-size: 0.81rem; line-height: 1.75; }
 .options-title {
   text-align: center;
   font-size: 1.2rem;
@@ -1119,15 +1181,10 @@ img {
   }
 
   .pricing-grid {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(268px, 78vw);
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-    padding: 26px 0 10px;
+    overflow: visible;
+    padding: 0;
     margin-bottom: 56px;
   }
 
@@ -1137,15 +1194,24 @@ img {
 
   .pricing-card {
     min-height: 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: none;
   }
+
+  .family-message { margin: 0 12px 28px; padding: 24px 18px; }
+  .family-message-title { font-size: 1.05rem; }
+  .desktop-only { display: none; }
+  .booking-flow { margin: 42px 12px 0; padding: 28px 18px; }
+  .booking-steps { grid-template-columns: 1fr; gap: 10px; }
+  .booking-steps li { display: grid; grid-template-columns: 42px 1fr; align-items: start; column-gap: 10px; padding: 16px; text-align: left; }
+  .booking-step-number { grid-row: span 2; margin: 0; }
+  .booking-step-title { margin-bottom: 5px; }
+  .booking-step-desc { grid-column: 2; }
 
   .pricing-target {
     font-size: 0.8rem;
     line-height: 1.7;
   }
 
-  .plan-swipe-hint,
   .swipe-hint {
     display: block;
     text-align: center;
@@ -1155,7 +1221,6 @@ img {
     margin: -12px 0 14px;
   }
 
-  .plan-swipe-hint::after,
   .swipe-hint::after {
     content: '  ←→';
     letter-spacing: 0.12em;
